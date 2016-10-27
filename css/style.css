@@ -6018,6 +6018,8 @@ div.fh5co-portfolio {
   @media screen and (max-width: 768px) {
     div.fh5co-portfolio .fh5co-portfolio-item .fh5co-portfolio-figure {
       height: 400px; } }
+  div.fh5co-portfolio .fh5co-portfolio-item .fh5co-portfolio-figure a {
+    opacity: 0.4; }
   div.fh5co-portfolio .fh5co-portfolio-item.fh5co-img-right .fh5co-portfolio-figure {
     position: absolute;
     right: 0px;
