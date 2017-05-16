@@ -1,0 +1,27 @@
+.folding {
+  position: relative; }
+  .folding .read-more {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+    margin: 0;
+    padding: 60px 0 10px 0;
+    background-image: linear-gradient(to bottom, transparent, white);
+    z-index: 100;
+    color: #868f90;
+    font-weight: bold;
+    text-shadow: 4px 4px 18px #868f90; }
+  .folding.fold {
+    max-height: 220px;
+    overflow-y: hidden; }
+    .folding.fold .read-more {
+      display: block; }
+  .folding.row .read-more {
+    left: 5px;
+    right: 5px; }
+
+/*# sourceMappingURL=folding.css.map */
