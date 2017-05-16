@@ -1,3 +1,7 @@
+@import "variables";
+
+/*
+
 // Fonts
 
 
@@ -27,6 +31,7 @@ $input-border-focus:  $brand-primary !default;
 $form-group-margin-bottom:       30px !default;
 
 $navbar-height:                  80px !default;
+*/
 
 // Mixin
 @mixin flex() {
@@ -130,9 +135,11 @@ p {
 }
 
 h1, h2 {
+/*
 	font-family: $font-robotoslab;
 	font-weight: 300;
 	color: $brand-black;
+*/
 	margin-top: 0;
 	margin-bottom: 20px;	
 }
@@ -253,11 +260,11 @@ h1, h2 {
 	// padding-bottom: 5em;
 	clear: both;
 //	padding-top: 10px;
-    @media screen and (max-width: $screen-sm) {
-        a img {
-            width: 100%;
-        }
-    }
+//    @media screen and (max-width: $screen-sm) {
+//        a img {
+//            width: 100%;
+//        }
+//    }
    @media screen and (min-width: $screen-sm) {
         .container {
         	width: 100% !important;
@@ -266,16 +273,22 @@ h1, h2 {
    }
    .events {
      padding: 1em;
+     height:  175px;
+     overflow-y:auto;
      background-color: rgba(255,255,255,0.7);
      a {
    	color:#31708F;
      }
+     @media screen and (max-width: $screen-sm) {
+       display:none;
+     }
    }
    #main-logo-text {
-     padding-top:70pt;
+     padding-top:20pt;
+     margin-bottom:0;
      a {
        font-family: $font-logo;
-       font-size: 9em;
+       font-size: 13vw;
        color: $brand-logo-color;
        /*color:#3D517D;*/
        text-decoration:none;
@@ -283,6 +296,26 @@ h1, h2 {
      }
    }                 
 }
+
+#events-ticker {
+  display:none;
+  @media screen and (max-width: $screen-sm) {
+    display:block;
+  }
+  
+  a {
+    color:$brand-body-color;
+  }
+  img {
+    margin-right: 5px;
+  }
+  >div{
+    padding-left:5px;
+    padding-right:5px;
+    font-weight:bold;
+  }
+}
+
 
 #fh5co-content {
 	padding: 0 0 7em 0;
@@ -302,11 +335,22 @@ h1, h2 {
     font-size:large;
     .intro-lead {
         padding-top:20px;
-	font-size: 50px;
+	font-size: 4vw;
 	line-height: 60px;
 	font-family: $font-robotoslab;
     }
 }
+@media screen and (max-width: $screen-sm) {
+    .fh5co-intro .intro-lead {
+        font-size: 5vw;
+        padding-top:0;
+        padding-bottom:0;
+    }
+    #fh5co-main #main-logo-text a {
+        font-size: 13vw;
+    }
+}
+
 .section-lead {
 	font-size: 40px;
 	line-height: 50px;
@@ -429,25 +473,25 @@ div.fh5co-portfolio {
 	}
 }
 
-
 div.fh5co-features {
 	clear: both;
-	padding: 2em 0 0 0;
+	padding: 10px 0 0 0;
     background: #fafafa;
     > div {
         width: 100%;
         background: white;
     }
-	@media screen and (max-width: $screen-sm) {
+/*	@media screen and (max-width: $screen-sm) {
 		padding: 4em 0;
 	}
-	.fh5co-staff {
+*/	.fh5co-staff {
 		margin-bottom: 20px;
+		cursor:pointer;
 		figure {
 			margin-bottom: 30px;
 		}
 		a {
-			color:#868f90;
+			color:$brand-body-color;
 		}
 		h3 {
 			font-size: 18px;
@@ -455,6 +499,9 @@ div.fh5co-features {
 			position: relative;
 			//padding-bottom: 20px;
 			margin-bottom: 20px;
+			margin-top: 0;
+			text-align:center;
+			color:$brand-body-color;
 			&:after {
 				content: "";
 				position: absolute;
@@ -465,6 +512,19 @@ div.fh5co-features {
 				background: $brand-primary;
 			}
 		}
+		ul {
+			padding-left:1em;
+			margin-bottom:0px;
+		}
+		@media screen and (max-width: $screen-xs) {
+			p, ul {
+				display:none;
+			}
+			h3 {
+				padding-top:20px; 
+			}
+		}
+
 		.fh5co-social {
 			a {
 				color: $brand-gray;
@@ -472,10 +532,10 @@ div.fh5co-features {
 					color: $brand-black;
 				}
 			}
-            i.icon-facebook {
-                background: #96A1B7;
-                border-radius: 6px;            
-            }
+			i.icon-facebook {
+				background: #96A1B7;
+				border-radius: 6px;            
+			}
 		}
 	}
 }
@@ -699,31 +759,39 @@ pre {
 	padding: 0;
 	margin: 0;
 	position:absolute;
-	left:30px;
+	left:10px;
 	bottom:15px;
+	font-size:36px;
 	li {
-		float:left;
-		padding: 0;
+//		float:left;
+		padding: 5px;
 		margin: 0;
 		list-style: none;
 		//display: inline-block;
 		a {
-			display: block;
-			float: left;
-			margin-right: 10px;
+//			display: block;
+//			float: left;
+//			margin-right: 10px;
 			&:hover, &:active, &:focus {
 				outline: none;
 				text-decoration: none;
 			}
 			i {
-				font-size: 40px;
-                border-radius: 6px;            
-                &.icon-facebook {
-                    background: #96A1B7;
-                }
+				border-radius: 6px;            
+				&.icon-facebook {
+					background: #96A1B7;
+				}
 			}
 		}
 	}
+/*
+	@media screen and (max-width: $screen-sm) {
+		left:10px;
+		bottom:auto;
+		top:10px;
+		font-size:5vw;
+	}
+*/
 }
 
 #galery {
@@ -1134,7 +1202,7 @@ img {
 		margin-right: auto
 	}
 }
-a > img {
+img {
 	&.fh5co-align-right {
 		float:right;
 		margin:0 0 .5em 1em;
@@ -1156,4 +1224,12 @@ a > img {
 		margin-left: auto;
 		margin-right: auto
 	}
+	&.fh5co-align-left-50 {
+		float: left;
+		margin: 0 1em .5em 0;
+		max-width: 50%;
+	}
+}
+.text-centered {
+	text-align:center;
 }

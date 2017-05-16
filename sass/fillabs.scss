@@ -1,0 +1,41 @@
+@import "variables";
+@import "fillabs_font";
+
+
+.section {
+  padding:25px;
+  background: $section-background;
+}
+.subsection {
+  background: $subsection-background;
+  padding:20px;
+  margin-bottom:25px;
+  position:relative;
+  a {
+    color: $link-color;
+  }
+}
+
+.side-margin {
+  margin-left:25px;
+  margin-right:25px;
+}
+
+.side-padding {
+  padding-left:25px;
+  padding-right:25px;
+}
+
+.leftline{
+  position: absolute;
+  top:2em;left:20px;bottom:2em;width:1px;
+  border: 4px solid $brand-logo-color;
+  border-radius: 4px;
+}
+
+ul.contacts {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+@import "bande";

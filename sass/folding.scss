@@ -1,0 +1,34 @@
+@import "variables";
+
+.folding {
+  position: relative;
+  .read-more { 
+    display:none;
+    cursor: pointer;
+    position: absolute; 
+    bottom: 0; 
+    left: 0px;
+    right: 0px;
+    text-align: center; 
+    margin: 0;
+    padding: 60px 0 10px 0;
+    background-image: linear-gradient(to bottom, transparent, white);
+    z-index: 100;
+    color: $brand-body-color;
+    font-weight: bold;
+    text-shadow: 4px 4px 18px $brand-body-color;
+  }
+  &.fold {
+    max-height: 220px;
+    overflow-y: hidden;
+    .read-more { 
+      display:block;
+    }
+  }
+  &.row {
+    .read-more { 
+      left: 5px;
+      right: 5px;
+    }
+  }
+}

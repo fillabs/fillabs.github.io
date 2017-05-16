@@ -1,0 +1,49 @@
+$font-roboto: 'Roboto', arial, sans-serif;
+$font-robotoslab: 'Roboto Slab', arial, sans-serif;
+//$font-logo: 'Airstrike Bullet';
+$font-logo: 'Airstrike Half';
+$font-logo-small: 'Airstrike Cond';
+
+$icomoon-font-path: "../fonts" !default;
+$icon-mail2: "\e002";
+$icon-align-justify: "\e026";
+$icon-email: "\e69a";
+$icon-v-card: "\e738";
+$icon-facebook-with-circle: "\e766";
+$icon-facebook: "\e767";
+$icon-linkedin-with-circle: "\e772";
+$icon-file-zip: "\e92b";
+$icon-tree: "\e9bc";
+$icon-mail4: "\ea86";
+$icon-github2: "\eab0";
+$icon-file-pdf: "\eadf";
+$icon-file-word: "\eae1";
+$icon-file-excel: "\eae2";
+$icon-libreoffice: "\eae3";
+$icon-git: "\eae7";
+
+
+// Overrides
+$grid-gutter-width: 50px !default; 
+$border-radius-base:  4px !default;
+$padding-base-vertical: 14px !default;
+
+$brand-primary: #fff !default;
+$brand-white: #fff;
+$brand-black: #000;
+$brand-darker: #444;
+$brand-gray: #ccc;
+$brand-lighter: #e9e9e9;
+$brand-body-color: #868f90;
+$brand-selection-color: #f9f6f0;
+$brand-overlay-color: #000;
+$brand-logo-color: #1a356e;
+$input-border-focus:  $brand-primary !default;
+$form-group-margin-bottom:       30px !default;
+
+$navbar-height:                  80px !default;
+
+$section-background: #efefef;
+$subsection-background: $brand-white;
+$link-color: #31708f;
+

@@ -186,23 +186,52 @@
 		teamWayPoint();
 		featureIconsWayPoint();
 		
-
+		$("#events-ticker ul").webTicker({
+    			height:'26px'
+		});    
 	});
 
 
 }());
 
-function triggerInfo(id){
+function triggerInfo(id, force){
         var a = $('.fh5co-portfolio-info');
         var info = '#'+id+'-info';
         a.each(function(){
             var t = $(this);
             if( t.is(info) ) {
-                t.toggleClass('zero-height');
+                if(force)
+                    t.removeClass('zero-height');
+                else
+                    t.toggleClass('zero-height');
             }else{
                 t.addClass('zero-height');
             }
         });
-        $('#'+id+'-item').scrollView();
+        if(!isElementInViewport($('#'+id+'-info'))){
+            $('#'+id+'-item').scrollView();
+        }
     }
-    
+
+function isElementInViewport (el) {
+
+    //special bonus for those using jQuery
+    if (typeof jQuery === "function" && el instanceof jQuery) {
+        el = el[0];
+    }
+    if(!el) return false;
+    var rect = el.getBoundingClientRect();
+    return rect.top >= 0 && rect.top < window.innerHeight;
+/*
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && //or $(window).height()
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth) //or $(window).width()
+    );
+*/
+}
+
+function scrollTo(sel){
+    $(sel).scrollView();
+}

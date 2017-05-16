@@ -1,0 +1,76 @@
+.bande {
+  position: absolute;
+  overflow: hidden;
+  height: 150px;
+  width: 150px;
+  text-align: center;
+  z-index: 0;
+  a {
+    font: 700 14px/12px Arial,Helvetica,sans-serif;
+//    text-transform: uppercase;
+    text-shadow: 1px 1px rgba(0,0,0,0.24);
+    text-align: center;
+    width: 207px;
+    display: block;
+    position: absolute;
+    text-decoration: none;
+    &:before, &:after {
+      position: absolute;
+      border-style: solid;
+      border-width: 4px 4px 0 4px;
+      content: ".";
+      text-indent: -5000px;
+      width: 0;
+      height: 0;
+    }
+    div.bande-shadow {
+      position:absolute;
+      top:0; bottom:0;
+    }
+  }
+  &.bande-topright {
+    right: -5px;
+    top: -4px;
+    a {
+      bottom: 78px;
+      left: -12px;
+//      right: -45px;
+//      top: 44px;
+      z-index: 1;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      padding: 9px 0 7px;
+      &:before {
+        bottom: -3px;
+        right: 4px;
+        -webkit-transform: rotate(225deg);
+        -ms-transform: rotate(225deg);
+        transform: rotate(225deg);
+      }
+      &:after {
+        bottom: -3px;
+        left: 5px;
+        -webkit-transform: rotate(135deg);
+        -ms-transform: rotate(135deg);
+        transform: rotate(135deg);
+      }
+      div.bande-shadow {
+        left:9px;
+        right:8px;
+      }
+    }
+  }
+  &.bande-red {
+    a {
+      color: #fff;
+      background: #f13340;
+      &:before, &:after {
+        border-color: #AD2B34 transparent transparent transparent;
+      }
+      div.bande-shadow {
+        box-shadow: 0px 4px 4px 0px rgba(218, 71, 82, 0.64);
+      }
+    }
+  }
+}
