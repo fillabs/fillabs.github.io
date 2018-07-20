@@ -5973,8 +5973,13 @@ h1, h2 {
     height: 175px;
     overflow-y: auto;
     background-color: rgba(255, 255, 255, 0.7); }
+    #fh5co-main .events h3 {
+      margin-top: 0px; }
+    #fh5co-main .events ul {
+      text-align: left; }
     #fh5co-main .events a {
-      color: #31708F; }
+      color: #31708F;
+      font-size: medium; }
     @media screen and (max-width: 768px) {
       #fh5co-main .events {
         display: none; } }
@@ -5997,7 +6002,8 @@ h1, h2 {
   #events-ticker a {
     color: #868f90; }
   #events-ticker img {
-    margin-right: 5px; }
+    margin-right: 5px;
+    height: 24px; }
   #events-ticker > div {
     padding-left: 5px;
     padding-right: 5px;
