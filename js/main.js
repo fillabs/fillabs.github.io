@@ -232,6 +232,6 @@ function isElementInViewport (el) {
 */
 }
 
-function scrollTo(sel){
+function scrollToId(sel){
     $(sel).scrollView();
 }
