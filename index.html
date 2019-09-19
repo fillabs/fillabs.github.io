@@ -64,8 +64,8 @@
         <div class="events col-xs-12 col-sm-4">
           <h3>Next events:</h3>
           <ul>
-            <li><a href="https://www.etsi.org/events/1141-plugtests-2019-itscms6">6th ITS Cooperative Mobility Services Event; ETSI, Sophia-Antipolis, France (25 February to 1 March 2019)</a></li>
-            <li><a href="https://www.etsi.org/events/1471-etsi-its-workshop-2019">10th ETSI ITS Workshop; ETSI, Sophia-Antipolis, France (4-6 March 2019)</a></li>
+            <li><a href="https://www.etsi.org/events/1141-plugtests-2019-itscms7">7th ITS Cooperative Mobility Services Event; ETSI, Sophia-Antipolis, France (04-08 November 2019)</a></li>
+            <li><a href="https://autonet-nti.ru/media/meropriyatiya/mezhdunarodniy-forum-autonet-2019/">International Forum AutoNET; Moscow, Russia (11 October 2019)</a></li>
           </ul>
 
         <!--
@@ -86,8 +86,8 @@
   <div id="events-ticker">
     <div style="float:left;">Next Events</div>
     <ul>
-            <li data-update="item1"><a href="https://www.etsi.org/events/1141-plugtests-2019-itscms6">6th ITS Cooperative Mobility Services Event; ETSI, Sophia-Antipolis, France (25 February to 1 March 2019)</a></li>
-            <li data-update="item2"><a href="https://www.etsi.org/events/1471-etsi-its-workshop-2019">10th ETSI ITS Workshop; ETSI, Sophia-Antipolis, France (4-6 March 2019)</a></li>
+            <li data-update="item1"><a href="https://www.etsi.org/events/1141-plugtests-2019-itscms7">7th ITS Cooperative Mobility Services Event; ETSI, Sophia-Antipolis, France (04-08 November 2019)</a></li>
+            <li data-update="item2"><a href="https://autonet-nti.ru/media/meropriyatiya/mezhdunarodniy-forum-autonet-2019/">International Forum AutoNET; Moscow, Russia (11 October 2019)</a></li>
     </ul>
   </div>
   <div class="fh5co-features">
@@ -165,10 +165,11 @@
                 <li><a href="https://ertico.com/event/4th-ecall-testfest/">4th eCall TESTFEST 2015, Ostrava, Czech Republic</a></li>
                 <li><a href="https://www.etsi.org/newsroom/blogs/blog-plugtests-2016-itscms5">5th ITS Plugtest 2016 Livorno, Italy</li>
                 <li><a href="https://ertico.com/event/5th-ecall-testfest/">5th eCall TESTFEST 2016, Harwell, Oxford, United Kingdom</a></li>
+                <li><a href="https://www.etsi.org/events/upcoming-events/1141-plugtests-2019-itscms6">6th ITS Plugtest 2019 ETSI, Sophia-Antipolist, France</a></li>
               </ul>
               <ul>
                 There are some events currently in active preparation phases:
-                <li><a href="https://www.etsi.org/events/upcoming-events/1141-plugtests-2019-itscms6">6th ITS Plugtest 2019 ETSI, Sophia-Antipolist, France</a></li>
+                <li><a href="https://www.etsi.org/events/upcoming-events/1141-plugtests-2019-itscms7">7th ITS Plugtest 2019 ETSI, Sophia-Antipolist, France</a></li>
               </ul>
               <ul>
                 We participated in the development of following test specifications and test suite implementations:
@@ -221,6 +222,8 @@
               <p>In co-operation with the ETSI CTI, <span class='fillabs'>FilLabs</span> is actively involved in development of various test suites for different telecommunication protocols, creation of TTCN-3 based Abstract Test suites, test adapters and codecs.</p>
               <p>During the last years <span class='fillabs'>FilLabs</span> has provided an expertise for a number of ETSI Specialist Tasks Forces:</p>
               <ul>
+                <li>STF 581 – Update of Infrastructure services test specifications</li>
+                <li>STF 580 – Update of CAM and DENM test specifications</li>
                 <li>STF 554 – ITS Security; Interoperability Tests Specification</li>
                 <li>STF 545 – Conformance Validation Framework Security Test Specifications of ETSI TS 102 941 Trust and Privacy Management</li>
                 <li>STF 538 – Conformance Validation Framework Security Test Specifications of ETSI TS 103 097</li>
@@ -276,12 +279,13 @@
               <p>The library is provided as an open source project hosted on <a href="https://github.com/fillabs/FITSec">GitHub</a>. It was created in 2015-2016 in order to validate the ETSI's ITS security test suite. The library is free for non-commercial and not-for-profit use, otherwise please contact the author.
               <p>It is written in plain C in cross-platform manner and has been compiled and tested in Linux(gcc) and Windows(mingw32,cygwin and Visual C 13) environments.</p>
               <p>It implements the plugin interface to use various crypto engines. For the moment, only the OpenSSL engine is implemented, but support of HSM (Hardware Security Module) is in the plan. Please see the fitsec_openssl.c for the example of plugin implementation.</p>
+              <p>Currently the new version of the library supporting TS 103 097 v1.3.1 and TS 102 941 v1.3.1 is under active development</p>
             </div>
           </div>
         </div><!--subsection-->
         <div class="subsection">
       	  <div class="bande bande-topright bande-red">
-              <a href="http://forge.etsi.org/websvn/listing.php?repname=ITS"><div class="bande-shadow"></div>See on <i class="icon-git"></i>&nbsp;ETSI Forge</a>
+              <a href="https://forge.etsi.org/rep/ITS/ITS/tree/STF525"><div class="bande-shadow"></div>See on <i class="icon-git"></i>&nbsp;ETSI Forge</a>
   	  </div>
           <h2>ETSI ITS Test Suite</h2>
           <div class="row folding fold">
@@ -328,11 +332,18 @@
                     <li><a href="http://www.etsi.org/deliver/etsi_ts/102800_102899/10285903/01.02.01_60/ts_10285903v010201p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 3: Abstract Test Suite (ATS) and Protocol Implementation eXtra Information for Testing (PIXIT)</a> (<a href="http://www.etsi.org/deliver/etsi_ts/102800_102899/10285903/01.02.01_60/ts_10285903v010201p0.zip"><i class="icon-file-zip"></i>&nbsp;TTCN-3 sources<a/>)</li>
                   </ul>
                 </li>
-                <li>ITS Security
+                <li>ITS Security communication
                   <ul>
-                    <li><a href="http://www.etsi.org/deliver/etsi_ts/103000_103099/10309601/01.03.01_60/ts_10309603v010301p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 1: Test requirements and Protocol Implementation Conformance Statement (PICS) pro forma</a></li>
-                    <li><a href="http://www.etsi.org/deliver/etsi_ts/103000_103099/10309602/01.03.01_60/ts_10309603v010301p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 2: Test Suite Structure and Test Purposes (TSS & TP)</a></li>
-                    <li><a href="http://www.etsi.org/deliver/etsi_ts/103000_103099/10309603/01.03.01_60/ts_10309603v010301p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 3: Abstract Test Suite (ATS) and Protocol Implementation eXtra Information for Testing (PIXIT)</a> (<a href="http://www.etsi.org/deliver/etsi_ts/103000_103099/10309603/01.03.01_60/ts_10309603v010301p0.zip"><i class="icon-file-zip"></i>&nbsp;TTCN-3 sources<a/>)</li>
+                    <li><a href="http://www.etsi.org/deliver/etsi_ts/103000_103099/10309601/01.04.01_60/ts_10309603v010401p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 1: Test requirements and Protocol Implementation Conformance Statement (PICS) pro forma</a></li>
+                    <li><a href="http://www.etsi.org/deliver/etsi_ts/103000_103099/10309602/01.04.01_60/ts_10309603v010401p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 2: Test Suite Structure and Test Purposes (TSS & TP)</a></li>
+                    <li><a href="http://www.etsi.org/deliver/etsi_ts/103000_103099/10309603/01.04.01_60/ts_10309603v010401p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 3: Abstract Test Suite (ATS) and Protocol Implementation eXtra Information for Testing (PIXIT)</a> (<a href="http://www.etsi.org/deliver/etsi_ts/103000_103099/10309603/01.04.01_60/ts_10309603v010401p0.zip"><i class="icon-file-zip"></i>&nbsp;TTCN-3 sources<a/>)</li>
+                  </ul>
+                </li>
+                <li>ITS Security Trust Services and PKI management
+                  <ul>
+                    <li><a href="https://www.etsi.org/deliver/etsi_ts/103500_103599/10352501/01.01.01_60/ts_10352501v010101p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 1: Test requirements and Protocol Implementation Conformance Statement (PICS) pro forma</a></li>
+                    <li><a href="https://www.etsi.org/deliver/etsi_ts/103500_103599/10352502/01.01.01_60/ts_10352502v010101p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 2: Test Suite Structure and Test Purposes (TSS & TP)</a></li>
+                    <li><a href="https://www.etsi.org/deliver/etsi_ts/103500_103599/10352503/01.01.01_60/ts_10352503v010101p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 3: Abstract Test Suite (ATS) and Protocol Implementation eXtra Information for Testing (PIXIT)</a></li>
                   </ul>
                 </li>
                 <li>Infrastructure Services (MAP,SPAT,IVI...)
