@@ -61,7 +61,7 @@
           <!--a href="#"><img src="images/fillabs-logo.png" alt="Fillabs" title="Fillabs - Telecommunication, Security, Testing"></a-->
           <h1 class="intro-lead">IT Engineering Expertise</h1>
         </div>
-        <div class="events col-xs-12 col-sm-4">
+        <div class="events col-xs-12 col-sm-4" style="visibility:hidden;">
           <h3>Next events:</h3>
           <ul>
             <li><a href="https://www.etsi.org/events/1141-plugtests-2019-itscms7">7th ITS Cooperative Mobility Services Event; ETSI, Sophia-Antipolis, France (04-08 November 2019)</a></li>
@@ -262,7 +262,7 @@
         <div class="subsection">
           <h2>FITSec - ITS security library</h2>
           <div class="bande bande-topright bande-red">
-            <a href="https://github.com/fillabs/FITSec"><div class="bande-shadow"></div>Fork on <i class="icon-github2"></i>&nbsp;GitHub</a>
+            <a href="https://github.com/fillabs/fitsec2-rel"><div class="bande-shadow"></div>Fork on <i class="icon-github2"></i>&nbsp;GitHub</a>
           </div>
           <!--a href="https://github.com/fillabs/FITSec">
             <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png">
@@ -275,19 +275,55 @@
               </figure>
             </div>
             <div class="col-sm-9 col-xs-12">
-              <p>The library provides the security envelop to be used for the Intelligent Transport Systems (ITS) G5 communication based on ETSI EN 302 636-4-1. The library is fully conformed to ETSI TS 103 097 v1.2.1 with optional support of non-published v1.2.5.</p>
-              <p>The library is provided as an open source project hosted on <a href="https://github.com/fillabs/FITSec">GitHub</a>. It was created in 2015-2016 in order to validate the ETSI's ITS security test suite. The library is free for non-commercial and not-for-profit use, otherwise please contact the author.
+              <p>The library provides the security envelop to be used for the Intelligent Transport Systems (ITS) G5/C-V2X communication based on ETSI EN 302 636-4-1.
+                 The library is fully conformed to ETSI TS 103 097 v1.3.1 and higher. It also supports some features of ETSI TS 102 941 v1.4.1 (trust lists, CRL, etc.)</p>
+              <p>The library is provided as an open source project hosted on <a href="https://github.com/fillabs/fitsec2-rel">GitHub</a>.
+                 The project was started in 2015-2016 as a validation targetfor the <a href="#TS.ITS">ETSI ITS security test suite</a>.
+                 The library is free for non-commercial and not-for-profit use, otherwise please contact the author.
               <p>It is written in plain C in cross-platform manner and has been compiled and tested in Linux(gcc) and Windows(mingw32,cygwin and Visual C 13) environments.</p>
-              <p>It implements the plugin interface to use various crypto engines. For the moment, only the OpenSSL engine is implemented, but support of HSM (Hardware Security Module) is in the plan. Please see the fitsec_openssl.c for the example of plugin implementation.</p>
-              <p>Currently the new version of the library supporting TS 103 097 v1.3.1 and TS 102 941 v1.3.1 is under active development</p>
+              <p>It implements the plugin interface to use various crypto engines. For the moment it supports the following:
+                 <ul><li>The OpenSSL (x86[free], ARM)</li>
+                 <li>The AutoTalks Craton 2 (ARM)</li></ul></p>
+              <p>The library contains a set of examples, but most of the features are implemented in the <a href="https://github.com/fillabs/fsmsggen">FSMsgGen</a> - the CAM/DENM/Beacon generator.<p>
             </div>
           </div>
         </div><!--subsection-->
         <div class="subsection">
+          <h2>ItsSecJS - The Javascript ITS Security OER parser<h2>
+          <div class="bande bande-topright bande-red">
+            <a href="https://github.com/fillabs/itsreadjs"><div class="bande-shadow"></div>Fork on <i class="icon-github2"></i>&nbsp;GitHub</a>
+          </div>
+          <div class="row folding fold">
+            <div class="read-more">Read More</div>
+            <div class="col-sm-3 col-xs-12 zoom fadeInUp animated">
+              <figure>
+                <img src="images/privacy.jpg" class="img-responsive animated">
+              </figure>
+            </div>
+            <div class="col-sm-9 col-xs-12">
+              <p> The Javascript parser for the ITS Security certificates and messages. It supports the following elements:<ul>
+               <li> The IEEE 1609.2 certificates</li>
+               <li> The IEEE 1609.2 messages</li>
+               <li> The ETSI TS 102 941 trust lists and CRLs</li>
+               <li> The ETSI TS 102 941 certificate requests</li>
+               <li> The ETSI TS 103 759 misbehaviour reports</li>
+             </ul></p>
+             <p> The parser contains the following modules:<ul>
+               <li><a href="https://github.com/fillabs/ieee1609dot2js">IEEE1609dot2js</a> - The IEEE 1609.2 certificate and message parser</li>
+               <li><a href="https://github.com/fillabs/EtsiTS102941js">EtsiTS102941js</a> - The ETSI TS 102 941 structures: trust lists, CRLs, certificate requests</li>
+               <li><a href="https://github.com/fillabs/ieee1609dot2dot1js">IEEE1609dot2dot1js</a> - The IEEE 1609.2.1 structures: certificate requests, responses, etc.</li>
+               <li><a href="https://github.com/fillabs/EtsiTs103759js">EtsiTS103759js</a> - The ETSI TS 103 759 misbehaviour reports</li>
+             </ul></p>
+            </div>
+          </div>
+        </div><!--subsection-->
+
+        <div class="subsection">
       	  <div class="bande bande-topright bande-red">
-              <a href="https://forge.etsi.org/rep/ITS/ITS/tree/STF525"><div class="bande-shadow"></div>See on <i class="icon-git"></i>&nbsp;ETSI Forge</a>
+              <a href="https://forge.etsi.org/rep/ITS/TS.ITS"><div class="bande-shadow"></div>See on <i class="icon-git"></i>&nbsp;ETSI Forge</a>
   	  </div>
           <h2>ETSI ITS Test Suite</h2>
+          <a name="TS.ITS"></a>
           <div class="row folding fold">
       	    <div class="read-more">Read More</div>
             <div class="col-sm-3 col-xs-12 zoom fadeInUp animated">
@@ -300,59 +336,63 @@
               <ul>For the moment ETSI ITS Test Specifications contains following modules:
                 <li>Cooperative Awareness Basic Service (CA)
                   <ul>
-                    <li><a href="http://www.etsi.org/deliver/etsi_ts/102800_102899/10286801/01.04.01_60/ts_10286802v010401p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 1: Test requirements and Protocol Implementation Conformance Statement (PICS) pro forma</a></li>
-                    <li><a href="http://www.etsi.org/deliver/etsi_ts/102800_102899/10286802/01.04.01_60/ts_10286802v010401p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 2: Test Suite Structure and Test Purposes (TSS & TP)</a></li>
-                    <li><a href="http://www.etsi.org/deliver/etsi_ts/102800_102899/10286803/01.04.01_60/ts_10286803v010401p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 3: Abstract Test Suite (ATS) and Protocol Implementation eXtra Information for Testing (PIXIT)</a> (<a href="http://www.etsi.org/deliver/etsi_ts/102800_102899/10286803/01.04.01_60/ts_10286803v010401p0.zip"><i class="icon-file-zip"></i>&nbsp;TTCN-3 sources<a/>)</li>
+                    <li><a href="http://www.etsi.org/deliver/etsi_ts/102800_102899/10286801/01.05.01_60/ts_10286802v010501p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 1: Test requirements and Protocol Implementation Conformance Statement (PICS) pro forma</a></li>
+                    <li><a href="http://www.etsi.org/deliver/etsi_ts/102800_102899/10286802/01.05.01_60/ts_10286802v010501p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 2: Test Suite Structure and Test Purposes (TSS & TP)</a></li>
+                    <li><a href="http://www.etsi.org/deliver/etsi_ts/102800_102899/10286803/01.05.01_60/ts_10286803v010501p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 3: Abstract Test Suite (ATS) and Protocol Implementation eXtra Information for Testing (PIXIT)</a> (<a href="http://www.etsi.org/deliver/etsi_ts/102800_102899/10286803/01.04.01_60/ts_10286803v010401p0.zip"><i class="icon-file-zip"></i>&nbsp;TTCN-3 sources<a/>)</li>
                   </ul>
                 </li>
                 <li>Decentralized Environmental Notification Basic Service (DEN)
                   <ul>
-                    <li><a href="http://www.etsi.org/deliver/etsi_ts/102800_102899/10286901/01.05.01_60/ts_10286903v010501p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 1: Test requirements and Protocol Implementation Conformance Statement (PICS) pro forma</a></li>
-                    <li><a href="http://www.etsi.org/deliver/etsi_ts/102800_102899/10286902/01.05.01_60/ts_10286903v010501p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 2: Test Suite Structure and Test Purposes (TSS & TP)</a></li>
-                    <li><a href="http://www.etsi.org/deliver/etsi_ts/102800_102899/10286903/01.05.01_60/ts_10286903v010501p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 3: Abstract Test Suite (ATS) and Protocol Implementation eXtra Information for Testing (PIXIT)</a> (<a href="http://www.etsi.org/deliver/etsi_ts/102800_102899/10286903/01.05.01_60/ts_10286903v010501p0.zip"><i class="icon-file-zip"></i>&nbsp;TTCN-3 sources<a/>)</li>
+                    <li><a href="http://www.etsi.org/deliver/etsi_ts/102800_102899/10286901/01.06.01_60/ts_10286903v010601p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 1: Test requirements and Protocol Implementation Conformance Statement (PICS) pro forma</a></li>
+                    <li><a href="http://www.etsi.org/deliver/etsi_ts/102800_102899/10286902/01.06.01_60/ts_10286903v010601p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 2: Test Suite Structure and Test Purposes (TSS & TP)</a></li>
+                    <li><a href="http://www.etsi.org/deliver/etsi_ts/102800_102899/10286903/01.06.01_60/ts_10286903v010601p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 3: Abstract Test Suite (ATS) and Protocol Implementation eXtra Information for Testing (PIXIT)</a> (<a href="http://www.etsi.org/deliver/etsi_ts/102800_102899/10286903/01.05.01_60/ts_10286903v010501p0.zip"><i class="icon-file-zip"></i>&nbsp;TTCN-3 sources<a/>)</li>
                   </ul>
                 </li>
                 <li>GeoNetworking</li>
                   <ul>
-                    <li><a href="http://www.etsi.org/deliver/etsi_ts/102800_102899/10287101/01.03.01_60/ts_10287103v010301p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 1: Test requirements and Protocol Implementation Conformance Statement (PICS) pro forma</a></li>
-                    <li><a href="http://www.etsi.org/deliver/etsi_ts/102800_102899/10287102/01.03.01_60/ts_10287103v010301p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 2: Test Suite Structure and Test Purposes (TSS & TP)</a></li>
-                    <li><a href="http://www.etsi.org/deliver/etsi_ts/102800_102899/10287103/01.03.01_60/ts_10287103v010301p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 3: Abstract Test Suite (ATS) and Protocol Implementation eXtra Information for Testing (PIXIT)</a> (<a href="http://www.etsi.org/deliver/etsi_ts/102800_102899/10287103/01.03.01_60/ts_10287103v010301p0.zip"><i class="icon-file-zip"></i>&nbsp;TTCN-3 sources<a/>)</li>
+                    <li><a href="http://www.etsi.org/deliver/etsi_ts/102800_102899/10287101/01.05.01_60/ts_10287103v010501p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 1: Test requirements and Protocol Implementation Conformance Statement (PICS) pro forma</a></li>
+                    <li><a href="http://www.etsi.org/deliver/etsi_ts/102800_102899/10287102/01.05.01_60/ts_10287103v010501p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 2: Test Suite Structure and Test Purposes (TSS & TP)</a></li>
+                    <li><a href="http://www.etsi.org/deliver/etsi_ts/102800_102899/10287103/01.05.01_60/ts_10287103v010501p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 3: Abstract Test Suite (ATS) and Protocol Implementation eXtra Information for Testing (PIXIT)</a> (<a href="http://www.etsi.org/deliver/etsi_ts/102800_102899/10287103/01.03.01_60/ts_10287103v010301p0.zip"><i class="icon-file-zip"></i>&nbsp;TTCN-3 sources<a/>)</li>
                   </ul>
                 <li>Transmission of IP packets over GeoNetworking (GeoIPv6)
                   <ul>
-                    <li><a href="http://www.etsi.org/deliver/etsi_ts/102800_102899/10285901/01.02.01_60/ts_10285903v010201p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 1: Test requirements and Protocol Implementation Conformance Statement (PICS) pro forma</a></li>
-                    <li><a href="http://www.etsi.org/deliver/etsi_ts/102800_102899/10285902/01.02.01_60/ts_10285903v010201p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 2: Test Suite Structure and Test Purposes (TSS & TP)</a></li>
-                    <li><a href="http://www.etsi.org/deliver/etsi_ts/102800_102899/10285903/01.02.01_60/ts_10285903v010201p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 3: Abstract Test Suite (ATS) and Protocol Implementation eXtra Information for Testing (PIXIT)</a> (<a href="http://www.etsi.org/deliver/etsi_ts/102800_102899/10285903/01.02.01_60/ts_10285903v010201p0.zip"><i class="icon-file-zip"></i>&nbsp;TTCN-3 sources<a/>)</li>
+                    <li><a href="http://www.etsi.org/deliver/etsi_ts/102800_102899/10285901/01.03.01_60/ts_10285903v010301p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 1: Test requirements and Protocol Implementation Conformance Statement (PICS) pro forma</a></li>
+                    <li><a href="http://www.etsi.org/deliver/etsi_ts/102800_102899/10285902/01.03.01_60/ts_10285903v010301p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 2: Test Suite Structure and Test Purposes (TSS & TP)</a></li>
+                    <li><a href="http://www.etsi.org/deliver/etsi_ts/102800_102899/10285903/01.03.01_60/ts_10285903v010301p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 3: Abstract Test Suite (ATS) and Protocol Implementation eXtra Information for Testing (PIXIT)</a> (<a href="http://www.etsi.org/deliver/etsi_ts/102800_102899/10285903/01.02.01_60/ts_10285903v010201p0.zip"><i class="icon-file-zip"></i>&nbsp;TTCN-3 sources<a/>)</li>
                   </ul>
                 </li>
                 <li>Geonetworking Basic Transport Protocol (BTP)
                   <ul>
-                    <li><a href="http://www.etsi.org/deliver/etsi_ts/102800_102899/10285901/01.02.01_60/ts_10285903v010201p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 1: Test requirements and Protocol Implementation Conformance Statement (PICS) pro forma</a></li>
-                    <li><a href="http://www.etsi.org/deliver/etsi_ts/102800_102899/10285902/01.02.01_60/ts_10285903v010201p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 2: Test Suite Structure and Test Purposes (TSS & TP)</a></li>
-                    <li><a href="http://www.etsi.org/deliver/etsi_ts/102800_102899/10285903/01.02.01_60/ts_10285903v010201p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 3: Abstract Test Suite (ATS) and Protocol Implementation eXtra Information for Testing (PIXIT)</a> (<a href="http://www.etsi.org/deliver/etsi_ts/102800_102899/10285903/01.02.01_60/ts_10285903v010201p0.zip"><i class="icon-file-zip"></i>&nbsp;TTCN-3 sources<a/>)</li>
+                    <li><a href="http://www.etsi.org/deliver/etsi_ts/102800_102899/10287001/01.02.01_60/ts_10287001v010201p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 1: Test requirements and Protocol Implementation Conformance Statement (PICS) pro forma</a></li>
+                    <li><a href="http://www.etsi.org/deliver/etsi_ts/102800_102899/10287002/01.02.01_60/ts_10287002v010201p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 2: Test Suite Structure and Test Purposes (TSS & TP)</a></li>
+                    <li><a href="http://www.etsi.org/deliver/etsi_ts/102800_102899/10287003/01.02.01_60/ts_10287003v010201p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 3: Abstract Test Suite (ATS) and Protocol Implementation eXtra Information for Testing (PIXIT)</a> (<a href="http://www.etsi.org/deliver/etsi_ts/102800_102899/10285903/01.02.01_60/ts_10285903v010201p0.zip"><i class="icon-file-zip"></i>&nbsp;TTCN-3 sources<a/>)</li>
                   </ul>
                 </li>
                 <li>ITS Security communication
                   <ul>
-                    <li><a href="http://www.etsi.org/deliver/etsi_ts/103000_103099/10309601/01.04.01_60/ts_10309603v010401p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 1: Test requirements and Protocol Implementation Conformance Statement (PICS) pro forma</a></li>
-                    <li><a href="http://www.etsi.org/deliver/etsi_ts/103000_103099/10309602/01.04.01_60/ts_10309603v010401p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 2: Test Suite Structure and Test Purposes (TSS & TP)</a></li>
-                    <li><a href="http://www.etsi.org/deliver/etsi_ts/103000_103099/10309603/01.04.01_60/ts_10309603v010401p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 3: Abstract Test Suite (ATS) and Protocol Implementation eXtra Information for Testing (PIXIT)</a> (<a href="http://www.etsi.org/deliver/etsi_ts/103000_103099/10309603/01.04.01_60/ts_10309603v010401p0.zip"><i class="icon-file-zip"></i>&nbsp;TTCN-3 sources<a/>)</li>
+                    <li><a href="http://www.etsi.org/deliver/etsi_ts/103000_103099/10309601/01.05.02_60/ts_10309601v010502p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 1: Test requirements and Protocol Implementation Conformance Statement (PICS) pro forma</a></li>
+                    <li><a href="http://www.etsi.org/deliver/etsi_ts/103000_103099/10309602/01.05.02_60/ts_10309602v010502p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 2: Test Suite Structure and Test Purposes (TSS & TP)</a></li>
+                    <li><a href="http://www.etsi.org/deliver/etsi_ts/103000_103099/10309603/01.05.02_60/ts_10309603v010502p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 3: Abstract Test Suite (ATS) and Protocol Implementation eXtra Information for Testing (PIXIT)</a> (<a href="http://www.etsi.org/deliver/etsi_ts/103000_103099/10309603/01.04.01_60/ts_10309603v010401p0.zip"><i class="icon-file-zip"></i>&nbsp;TTCN-3 sources<a/>)</li>
                   </ul>
                 </li>
                 <li>ITS Security Trust Services and PKI management
                   <ul>
-                    <li><a href="https://www.etsi.org/deliver/etsi_ts/103500_103599/10352501/01.01.01_60/ts_10352501v010101p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 1: Test requirements and Protocol Implementation Conformance Statement (PICS) pro forma</a></li>
-                    <li><a href="https://www.etsi.org/deliver/etsi_ts/103500_103599/10352502/01.01.01_60/ts_10352502v010101p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 2: Test Suite Structure and Test Purposes (TSS & TP)</a></li>
-                    <li><a href="https://www.etsi.org/deliver/etsi_ts/103500_103599/10352503/01.01.01_60/ts_10352503v010101p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 3: Abstract Test Suite (ATS) and Protocol Implementation eXtra Information for Testing (PIXIT)</a></li>
+                    <li><a href="https://www.etsi.org/deliver/etsi_ts/103500_103599/10352501/01.02.02_60/ts_10352501v010202p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 1: Test requirements and Protocol Implementation Conformance Statement (PICS) pro forma</a></li>
+                    <li><a href="https://www.etsi.org/deliver/etsi_ts/103500_103599/10352502/01.02.02_60/ts_10352502v010202p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 2: Test Suite Structure and Test Purposes (TSS & TP)</a></li>
+                    <li><a href="https://www.etsi.org/deliver/etsi_ts/103500_103599/10352503/01.02.02_60/ts_10352503v010202p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 3: Abstract Test Suite (ATS) and Protocol Implementation eXtra Information for Testing (PIXIT)</a></li>
                   </ul>
                 </li>
                 <li>Infrastructure Services (MAP,SPAT,IVI...)
-                  <p>The work is ongoing</p>
+                  <ul>
+                    <li><a href="https://www.etsi.org/deliver/etsi_ts/103100_103199/10319101/01.03.01_60/ts_10319101v010301p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 1: Test requirements and Protocol Implementation Conformance Statement (PICS) pro forma</a></li>
+                    <li><a href="https://www.etsi.org/deliver/etsi_ts/103100_103199/10319102/01.03.01_60/ts_10319102v010301p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 2: Test Suite Structure and Test Purposes (TSS & TP)</a></li>
+                    <li><a href="https://www.etsi.org/deliver/etsi_ts/103100_103199/10319103/01.03.01_60/ts_10319103v010301p.pdf"><i class="icon-file-pdf"></i>&nbsp;Part 3: Abstract Test Suite (ATS) and Protocol Implementation eXtra Information for Testing (PIXIT)</a></li>
+                  </ul>
                 </li>
               </ul>
-              <p>The ETSI ITS Test Suite contains all these modules implemented on <a href="http://www.ttcn-3.org">TTCN-3</a> language, reference Java based implementation of the test adapter and the codec implementation.
+              <p>The ETSI ITS Test Suite contains abstract test suites modules for each supported protocols. These modules are implemented on <a href="http://www.ttcn-3.org">TTCN-3</a> language and the C++ based implementation of the test adaptation layer.
                  All modules of the test suite has been validated over multiple devices under tests during test sessions in ETSI and on Plugtest events.
-                 The full code of the test suite is available as an open source project at <a href="https://forge.etsi.org/gitlab/ITS/ITS/tree/STF525"><i class="icon-git"></i>&nbsp;ETSI forge</a>. Please use the last released version.
+                 The full code of the test suite is available as an open source project at <a href="https://forge.etsi.org/rep/ITS/TS.ITS"><i class="icon-git"></i>&nbsp;ETSI forge</a>. Please use the last released version.
               </p> 
             </div>
           </div>
