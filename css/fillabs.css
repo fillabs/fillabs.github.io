@@ -66,6 +66,10 @@ i {
 .icon-git:before {
   content: ""; }
 
+.icon-telegram:before {
+  content: "\ea95";
+}
+
 .section {
   padding: 25px;
   background: #efefef; }
