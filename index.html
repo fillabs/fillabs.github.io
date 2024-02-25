@@ -152,9 +152,9 @@
               <p>For over 10 years <span class='fillabs'>FilLabs</span> takes an active part in development of various ITS standards, 
                  provides the expertise in the communication protocol analysis, 
                  participates in the development of the test suites and performs the actual testing process.</p>
+              <p>Being an expert in ITS standards, developed by ETSI and other standardisation bodies,
+                <span class='fillabs'>FilLabs</span> provides an expertise in various ITS domains:</p>
               <ul>
-                Being an expert in ITS standards, developed by ETSI and other standardisation bodies,
-                <span class='fillabs'>FilLabs</span> provides an expertise in various ITS domains:
                 <li> ITS GeoNetworking (G5 / C-V2X).</li>
                 <li> Cooperative Awareness Basic Service (CAM)</li>
                 <li> Decentralized Environmental Notification Basic Service (DENM)</li>
@@ -177,12 +177,12 @@
               </ul>
               <ul>
                 There are some events currently in active preparation phases:
-                <li><a href="">3rd ITS Security Plugtest 2024 ETSI, Sophia-Antipolist, France</a></li>
+                <li><a href="">3rd ITS Security Plugtest 2025 ETSI, Sophia-Antipolist, France</a></li>
                 <li><a href="">4th C-V2X Plugtest 2024, Hungary</a></li>
                 <li><a href="">NG 112/eCall Plugtest 2024, Malaga, Spain</a></li>
               </ul>
               <ul>
-                We participated in the development of following test specifications and test suite implementations:
+                <span class='fillabs'>FilLabs</span> participated in the development of following test specifications and test suite implementations:
                 <li> ETSI TS 102 868 Conformance test specification for Co-operative Awareness Messages (CAM).</li>
                 <li> ETSI TS 102 869 Conformance test specification for Decentralized Environmental Notification Messages (DENM).</li>
                 <li> ETSI TS 102 870 Conformance test specifications for GeoNetworking Basic Transport Protocol (BTP).</li>
@@ -210,11 +210,12 @@
               <p>Security aspects shall be considered as an inevitable part of every modern telecommunication technology.</p>
               <p><span class='fillabs'>Fillabs</span> is actively participating in development of harmonized standards for the ITS security communication. </p>
               <p>There are a lot of applications in transportation systems and especially in vehicles, requiring communication between different components: the communication between vehicles (V2V), between cars and infrastructure services (V2I and I2V), between cars and charging stations (V2G), internal car communications. New generation of car is going to provide new services, such as Adaptive Cruise Control, Self-Driving systems, etc. All these kinds of communication needs to be protected against various types of attack. It can be achieved using ITS Security protocol, which is able to provide a trusted channel between all communication nodes.</p>
+              <p>Being deeply involved in ITS standardization process, <span class='fillabs'>Fillabs</span> takes an active part in development of the ITS Security specifications, such as:</p>
               <ul>
-                Being deeply involved in ITS standardization process, <span class='fillabs'>Fillabs</span> takes an active part in development of the ITS Security communication protocols standards, such as:
                 <li>ETSI TS 103 097 ITS Security header and certificate formats</li>
                 <li>ETSI TS 102 940 ITS communications security architecture and security management</li>
                 <li>ETSI TS 102 941 ITS Security Trust and Privacy Management</li>
+                <li>ETSI TS 103 601 Security management messages communication requirements and distribution protocols</li>
                 <li>ETSI TS 103 795 ITS Misbehavior reporting</li>
               </ul>
             </div>
@@ -295,12 +296,19 @@
               </figure>
             </div>
             <div class="col-sm-9 col-xs-12">
-              <p>The library provides the security envelop to be used for the Intelligent Transport Systems (ITS) G5/C-V2X communication based on ETSI EN 302 636-4-1.
-                 The library is fully conformed to ETSI TS 103 097 v1.3.1 and higher. It also supports some features of ETSI TS 102 941 v1.4.1 (trust lists, CRL, etc.)</p>
-              <p>The library is provided as an open source project hosted on <a href="https://github.com/fillabs/fitsec2-rel">GitHub</a>.
-                 The project was started in 2015-2016 as a validation targetfor the <a href="#TS.ITS">ETSI ITS security test suite</a>.
+              <p>The library provides the security envelop to be used for the Intelligent Transport Systems (ITS) G5/C-V2X communication.
+                 This can be based on GeoNetworking (ETSI EN 302 636-4-1) or any other communication protocol.</p>
+              <p>The library is fully conformed to ETSI TS 103 097 v1.3.1 and higher. Currently v2.1.1 is implemented.</p>
+              <p>The library also supports some features of ETSI TS 102 941 v2.1.1:</p>
+              <ul>
+                <li> Certificate Trust Lists (CTL/ECTL) and Certificate Revocation Lists (CRL)</li>
+                <li> Enrolment</li>
+                <li> Authorization </li>
+              </ul>
+              <p>The library is provided as aproject hosted on <a href="https://github.com/fillabs/fitsec2-rel">GitHub</a>.
+                 The project was started in 2015-2016 as a validation target for the <a href="#TS.ITS">ETSI ITS security test suite</a>.
                  The library is free for non-commercial and not-for-profit use, otherwise please contact the author.
-              <p>It is written in plain C in cross-platform manner and has been compiled and tested in Linux(gcc) and Windows(mingw32,cygwin and Visual C 13) environments.</p>
+              <p>It is written in plain C in cross-platform manner and has been compiled and tested in Linux(gcc) and Windows (mingw32,cygwin and Visual C 13) environments.</p>
               <p>It implements the plugin interface to use various crypto engines. For the moment it supports the following:
                  <ul><li>The OpenSSL (x86[free], ARM)</li>
                  <li>The AutoTalks Craton 2 (ARM)</li></ul></p>
